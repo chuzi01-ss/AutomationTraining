@@ -21,6 +21,8 @@ public class RadioButton {
       boolean btnSelected=  driver.findElement(By.cssSelector(btn_radio_female)).isSelected();
         if(!btnSelected) {
             System.out.println("button is selected or not "+btnSelected);
+
+
             driver.findElement(By.cssSelector(btn_radio_female)).click();
 
 
