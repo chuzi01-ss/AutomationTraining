@@ -13,8 +13,6 @@ public class DropDownHandling {
 
         WebDriver driver = new ChromeDriver();
         driver.get(appURL);
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
 
         WebElement elm = driver.findElement(By.cssSelector("select#multiselect1"));
         Select sel = new Select(elm);
@@ -22,15 +20,17 @@ public class DropDownHandling {
         sel.selectByVisibleText("Audi");
         sel.selectByValue("swiftx");
 
-
         for (WebElement elem : sel.getAllSelectedOptions()) {
-            System.out.println(elem.getText());
-
+           System.out.println(elem.getText());
         }
-       // sel.deselectByIndex(0);
-       // sel.deselectByVisibleText("Audi");
-      //  sel.deselectByValue("swiftx");
-        sel.deselectAll();
+
+        sel.deselectByIndex(0);
+        sel.deselectByVisibleText("Audi");
+        sel.deselectByValue("swiftx");
+         sel.deselectAll();
+
+
+
 
     }
 }
