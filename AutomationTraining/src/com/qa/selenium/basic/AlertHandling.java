@@ -16,6 +16,7 @@ public class AlertHandling {
         Alert al =driver.switchTo().alert();
        al.sendKeys("hi");
        al.accept();
+       driver.quit();
 
 
 
